@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/World.unity
     guid: 8f0148b6ce7e9414da873a03f5838a0c
   - enabled: 1
+    path: Assets/Scenes/Easy/Easy.unity
+    guid: 1c0672ac370b8fd4e843c2510cdb613c
+  - enabled: 1
+    path: Assets/Scenes/Normal/Normal.unity
+    guid: eb4df0bda91338a4d90ddfe7e5dd2a64
+  - enabled: 1
+    path: Assets/Scenes/Hard/Hard.unity
+    guid: 43328ce8f9d0e1d4ebdb664a21bfe1db
+  - enabled: 1
     path: Assets/Scenes/Store.unity
     guid: bff0d7603bf9e5e4aa769b9f2f134054
   - enabled: 1

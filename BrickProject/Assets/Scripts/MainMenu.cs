@@ -23,7 +23,22 @@ public class MainMenu : MonoBehaviour
     //This is for the World Scene
     public void Easy()
     {
+        SceneManager.LoadScene("Easy");
+    }
 
+    public void Normal()
+    {
+        SceneManager.LoadScene("Normal");
+    }
+
+    public void Hard()
+    {
+        SceneManager.LoadScene("Hard");
+    }
+
+    public void LeftArrow()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
 

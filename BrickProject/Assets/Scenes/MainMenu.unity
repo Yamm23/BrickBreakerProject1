@@ -1319,9 +1319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Option
-
-'
+  m_text: Store
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9ad1c429381d34246bbcc911a78c6947, type: 2}
   m_sharedMaterial: {fileID: -7754535717940231990, guid: 9ad1c429381d34246bbcc911a78c6947, type: 2}
