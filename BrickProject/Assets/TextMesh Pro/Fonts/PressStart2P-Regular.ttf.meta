@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8a2b9e2a607dd2143b58c44bc32410b4
+guid: 262d3abbc2fb88b448135d7b993de2b6
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,8 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Electronic Highway Sign
   fontNames:
-  - Electronic Highway Sign
+  - Press Start 2P
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
