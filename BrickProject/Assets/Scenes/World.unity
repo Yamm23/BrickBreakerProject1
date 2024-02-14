@@ -1388,9 +1388,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2028649567}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: Easy
+      - m_Target: {fileID: 2028649568}
+        m_TargetAssemblyTypeName: LevelChooser, Assembly-CSharp
+        m_MethodName: EasyScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1742,6 +1742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028649566}
   - component: {fileID: 2028649567}
+  - component: {fileID: 2028649568}
   m_Layer: 0
   m_Name: ChooseWorld
   m_TagString: Untagged
@@ -1775,6 +1776,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33e298a809c6ae24da0bd7cd2149fc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2028649568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028649565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d4bd0dfe2bcde4b9114135cad4b2f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

@@ -10,4 +10,8 @@ public class LevelChooser : MonoBehaviour
     {
         SceneManager.LoadScene("World");
     }
+    public void EasyScene()
+    {
+        SceneManager.LoadScene("Easy");
+    }
 }
