@@ -37,7 +37,7 @@ public class Brick : MonoBehaviour
         {
             this.spriteRenderer.sprite = this.states[this.health - 1];
         }
-        FindObjectOfType<GameManager>().Hit(this);
+        FindObjectOfType<EasyManager>().Hit(this);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

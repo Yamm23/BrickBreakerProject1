@@ -3423,6 +3423,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   lives: 3
+  hearts:
+  - {fileID: 0}
+  fullHeart: {fileID: 21300000, guid: e5788f04958c65749a00894827b289c6, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 9353a45e9e05297498a94e029692f64e, type: 3}
 --- !u!4 &1880943692
 Transform:
   m_ObjectHideFlags: 0

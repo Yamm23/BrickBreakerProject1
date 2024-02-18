@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EasyManager : MonoBehaviour
 {
@@ -7,21 +8,23 @@ public class EasyManager : MonoBehaviour
     public Paddle paddle { get; private set; }
     public int score;
     public int lives = 3;
-    //public int level = 1;
+
 
     private void Awake()
     {
-        // Check if the current scene is an ELevel scene
+        // Check if the current scene is Easy or an ELevel scene with level between 1 and 10
         string currentSceneName = SceneManager.GetActiveScene().name;
-        if (!currentSceneName.StartsWith("ELevel"))
+        if ((currentSceneName.Equals("Easy")) || (currentSceneName.StartsWith("ELevel") && GetLevelFromSceneName(currentSceneName) <= 10))
+        {
+            // If it's an appropriate scene, do not destroy this EasyManager instance
+            DontDestroyOnLoad(gameObject);
+        }
+        else
         {
             // If not, destroy this EasyManager instance
             Destroy(gameObject);
             return;
         }
-
-        // Persist this GameObject across scene changes
-        DontDestroyOnLoad(gameObject);
 
         // Register to the sceneLoaded event
         SceneManager.sceneLoaded += OnLevelLoaded;
@@ -41,8 +44,11 @@ public class EasyManager : MonoBehaviour
 
     public void StartGame()
     {
-        // Load the level scene asynchronously
-        SceneManager.LoadSceneAsync("ELevel");
+        // Load the level scene asynchronously only if it's not already loaded
+        if (SceneManager.GetActiveScene().name != "Easy")
+        {
+            SceneManager.LoadSceneAsync("Easy");
+        }
 
         // Start a new game
         NewGame();
@@ -54,13 +60,10 @@ public class EasyManager : MonoBehaviour
         this.score = 0;
         this.lives = 3;
 
-        // Load the first level
-        //LoadLevel(1);
     }
 
     private void LoadLevel(int level)
     {
-        //this.level = level;
         SceneManager.LoadScene("ELevel" + level);
     }
 
@@ -105,5 +108,18 @@ public class EasyManager : MonoBehaviour
             // Start a new game
             GameOver();
         }
+    }
+
+
+
+    private int GetLevelFromSceneName(string sceneName)
+    {
+        // Extract the level number from the scene name
+        int level;
+        if (int.TryParse(sceneName.Replace("ELevel", ""), out level))
+        {
+            return level;
+        }
+        return -1; // Return -1 if the level number cannot be extracted
     }
 }
