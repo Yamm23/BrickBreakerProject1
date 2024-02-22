@@ -20,14 +20,14 @@ public class Ball : MonoBehaviour
         Vector2 force = Vector2.zero;
         force.x = Random.Range(-1f, 1f);
         force.y = -1f;
-
         this.myrigidbody.AddForce(force.normalized * speed);
 
     }
     public void ResetBall()
     {
-        this.transform.position = Vector2.zero;
+        transform.position = new Vector2(0.08f,0f );
         this.myrigidbody.velocity = Vector2.zero;
         Invoke(nameof(SetRandomTrajectory), 1f);
     }
+
 }

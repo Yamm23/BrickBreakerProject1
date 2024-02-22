@@ -109,6 +109,11 @@ public class EasyManager : MonoBehaviour
             GameOver();
         }
     }
+    public void UpdateLives()
+    {
+        Debug.Log("Health+");
+        this.lives++;
+    }
 
 
 
