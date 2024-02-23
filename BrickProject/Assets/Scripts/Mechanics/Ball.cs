@@ -24,6 +24,7 @@ public class Ball : MonoBehaviour
         this.myrigidbody.AddForce(force.normalized * speed);
 
     }
+
     public void ResetBall()
     {
         transform.position = new Vector2(0.08f,0f );
