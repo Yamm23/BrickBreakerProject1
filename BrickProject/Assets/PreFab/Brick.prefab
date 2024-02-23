@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 587624729411818757}
   m_Layer: 0
   m_Name: Brick
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3961187322650047426}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.18, y: 4.83, z: 1}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1567975687659923154
 SpriteRenderer:
@@ -149,3 +149,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3f39f5795f241b24a9e6db737a9b2c29, type: 3}
   - {fileID: 21300000, guid: e4b90efd28d568b4488bc5c970803dc1, type: 3}
   - {fileID: 21300000, guid: c362569a5dc9be842889714447466b90, type: 3}
+  points: 100

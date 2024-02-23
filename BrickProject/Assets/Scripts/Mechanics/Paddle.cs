@@ -5,7 +5,6 @@ public class Paddle : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 direction;
-
     public float speed = 30f;
     public float maxBounceAngle = 75f;
     public EasyManager em;
@@ -28,17 +27,22 @@ public class Paddle : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        // Check for touch input
+        if (Input.touchCount > 0)
         {
-            direction = Vector2.left;
-        }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            direction = Vector2.right;
-        }
-        else
-        {
-            direction = Vector2.zero;
+            Touch touch = Input.GetTouch(0); // Get the first touch (assuming single touch control)
+
+            // Convert touch position to world space
+            Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+
+            // Retain the existing z-position of the paddle
+            touchPosition.z = transform.position.z;
+
+            // Ensure the paddle stays in the same y-position
+            touchPosition.y = transform.position.y;
+
+            // Move the paddle to the touch position
+            transform.position = touchPosition;
         }
     }
 
