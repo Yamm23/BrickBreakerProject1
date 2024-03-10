@@ -111,8 +111,10 @@ public class EasyManager : MonoBehaviour
     }
     public void UpdateLives()
     {
+        FindObjectOfType<HeartManager>();
+      
         Debug.Log("Health+");
-        this.lives++;
+        lives++;
     }
 
 

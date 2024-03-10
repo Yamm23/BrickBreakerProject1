@@ -30,7 +30,7 @@ public class HeartManager : MonoBehaviour
         {
             img.sprite = emptyHeart;
         }
-        for (int i = 0; i < easyManager.lives; i++)
+        for (int i = 0; i < hearts.Length && i < easyManager.lives; i++)
         {
             hearts[i].sprite = fullHeart;
         }
