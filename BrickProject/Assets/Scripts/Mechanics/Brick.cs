@@ -22,6 +22,14 @@ public class Brick : MonoBehaviour
             this.spriteRenderer.sprite = this.states[this.health - 1];
         }
     }
+    //To check if the collided object is GameObject Ball
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Ball")
+        {
+            Hit();
+        }
+    }
     private void Hit()
     {
         if(this.unbreakable)
@@ -39,12 +47,6 @@ public class Brick : MonoBehaviour
         }
         FindObjectOfType<EasyManager>().Hit(this);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.name == "Ball")
-        {
-            Hit();
-        }
-    }
+
 
 }

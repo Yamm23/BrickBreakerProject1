@@ -33,6 +33,7 @@ public class Ball : MonoBehaviour
     {
         if (other.transform.CompareTag("Brick"))
         {
+
             Debug.Log("Powerup");
             int radChance = Random.Range(1, 101);
             if (radChance < 50)
